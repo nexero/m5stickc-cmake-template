@@ -1,0 +1,6 @@
+[submodule "esp-idf"]
+	path = esp-idf
+	url = https://github.com/espressif/esp-idf.git
+	branch = release/v3.3
+	fetchRecurseSubmodules = true
+	ignore = untracked

@@ -1,0 +1,41 @@
+language: c
+dist: xenial
+
+cache: ccache
+
+addons:
+  apt:
+    packages:
+    - git 
+    - wget 
+    - libncurses-dev 
+    - flex 
+    - bison 
+    - gperf 
+    - python 
+    - python-pip 
+    - python-setuptools 
+    - python-serial 
+    - python-cryptography 
+    - python-future 
+    - python-pyparsing 
+    - python-pyelftools 
+    - cmake 
+    - ninja-build 
+    - ccache
+    - wget
+
+before_script:
+  - export PREFIX="$(pwd)"
+  - wget https://dl.espressif.com/dl/xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz
+  - mkdir -p esp
+  - cd esp 
+  - tar -xzf ../xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz
+  - export PATH="$PREFIX/esp/xtensa-esp32-elf/bin:$PATH"
+
+script:
+  - cd $PREFIX
+  - /usr/bin/python -m pip install --user -r esp-idf/requirements.txt
+  - mkdir build; cd build
+  - cmake .. -G Ninja
+  - ninja
