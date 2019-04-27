@@ -63,9 +63,9 @@ git submodule update --recursive --checkout --force --init components/<another.r
 git config -f .gitmodules submodule.components/<another.repository>.fetchRecurseSubmodules true
 # better not track changes in the new submodule, if it doesn't belong to you:
 git config -f .gitmodules submodule.components/<another.repository>.ignore untracked
-# checkout specifiv tag or commit:
+# checkout specific tag or commit:
 cd components/<another.repository>
-git checkout <another.repositories.tag_or_commit>  # ignore detached HEAD!
+git checkout <another.repositories.tag_or_commit>  # ignore the 'detached HEAD' warning!
 cd ../..
 git add components/<another.repository>
 # commit new component
