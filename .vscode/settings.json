@@ -1,6 +1,6 @@
 {
     "cmake.generator": "Ninja",
     "cmake.environment": {
-        "ESPBAUD": "115200"
+        "ESPBAUD": "1500000"
     }
 }
