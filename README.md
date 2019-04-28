@@ -44,7 +44,7 @@ ninja menuconfig
 
 ### Compile & Upload
 ```bash
-# M5StickC does't accept esptool.py's default 1500000 bps
+# M5StickC does't accept esptool.py's default 460800 bps
 ESPBAUD=1500000 ninja flash
 ```
 
