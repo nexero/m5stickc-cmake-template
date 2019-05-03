@@ -1,10 +1,12 @@
 [submodule "esp-idf"]
 	path = esp-idf
 	url = https://github.com/espressif/esp-idf.git
-	branch = release/v3.3
+	branch = master
 	fetchRecurseSubmodules = true
 	ignore = untracked
 [submodule "components/arduino"]
 	path = components/arduino
 	url = https://github.com/espressif/arduino-esp32.git
 	branch = master
+	fetchRecurseSubmodules = true
+	ignore = untracked
