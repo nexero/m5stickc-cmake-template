@@ -4,13 +4,3 @@
 	branch = master
 	fetchRecurseSubmodules = true
 	ignore = untracked
-[submodule "components/arduino"]
-	path = components/arduino
-	url = https://github.com/espressif/arduino-esp32.git
-	branch = master
-	fetchRecurseSubmodules = true
-	ignore = untracked
-[submodule "components/M5StickC"]
-	path = components/M5StickC
-	url = https://github.com/nexero/M5StickC.git
-	branch = master
