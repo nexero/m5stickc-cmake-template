@@ -99,7 +99,7 @@ git config -f .gitmodules submodule.esp-idf.branch <new.Version.branch>
 # update esp-idf main repo
 git submodule update --remote --force esp-idf
 # checkout submodules for the branch HEAD of esp-idf
-git submodule update --checkout --force --recursive esp-idf
+cd esp-idf; git submodule update --checkout --force --recursive; cd ..
 # update python dependencies
 /usr/bin/python -m pip install --user -r esp-idf/requirements.txt --force
 ```
